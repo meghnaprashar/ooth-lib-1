@@ -462,7 +462,7 @@ class Ooth {
             })
 
             if (this.onLogin) {
-                this.onLogin(profile)
+                await this.onLogin(profile)
             }
 
             if (this.standalone) {
@@ -564,7 +564,7 @@ class Ooth {
             })
 
             if (loggedIn && this.onLogin) {
-                this.onLogin(profile)
+                await this.onLogin(profile)
             }
             if (registered && this.onRegister) {
                 this.onRegister(profile)
