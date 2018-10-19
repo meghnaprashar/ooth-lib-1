@@ -462,7 +462,7 @@ class Ooth {
             })
 
             if (this.onLogin) {
-                await this.onLogin(profile)
+                await Promise.resolve(this.onLogin(profile));
             }
 
             if (this.standalone) {
@@ -564,7 +564,7 @@ class Ooth {
             })
 
             if (loggedIn && this.onLogin) {
-                await this.onLogin(profile)
+                await Promise.resolve(this.onLogin(profile));
             }
             if (registered && this.onRegister) {
                 this.onRegister(profile)
