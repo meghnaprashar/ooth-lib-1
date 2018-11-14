@@ -210,6 +210,7 @@ class Ooth {
             const user = req.user
             this.sendStatus(req, {})
             req.logout()
+            req.session = null
             if (this.onLogout) {
                 await this.onLogout(user)
             }
