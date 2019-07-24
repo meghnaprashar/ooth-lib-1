@@ -5,7 +5,6 @@
   "main": "lib/index.js",
   "scripts": {
     "link": "yarn prepublish && yarn link",
-    "postinstall": "yarn build",
     "prepublish": "yarn build",
     "build": "babel src --out-dir lib --ignore '**/*.test.js'",
     "test": "jest"
